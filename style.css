@@ -40,12 +40,12 @@ body {
   object-fit: contain;
 }
 
-/* Logo Text Next to Image */
+/* Logo Text Next to Image 
 .logo-text {
-  font-size: 1.4rem;
+  font-size: 1.4rem; HardCom Solution text beside logo
   font-weight: 800;
   color: #0284c7;
-}
+}  */
 
 .nav-links {
   display: flex;
