@@ -160,18 +160,20 @@ body {
   box-shadow: 0 10px 25px rgba(2, 132, 199, 0.12); /* Soft shadow matching the blue accent */
 }
 
-/* 2. WHY US SECTION (Transition Gradient Dark-to-Light) */
+
+./* Why Us Section (Clean Light Background) */
 .why-us-section {
   padding: 5rem 8%;
-  background: linear-gradient(180deg, var(--mid-navy) 0%, var(--soft-blue) 40%, #ffffff 100%);
+  background-color: #f8fafc; /* Soft off-white matching the main body */
 }
 
+/* Updated section header colors for light background */
 .why-us-section .section-title h2 {
-  color: #ffffff;
+  color: #0f172a; /* Dark navy text */
 }
 
 .why-us-section .section-title p {
-  color: #cbd5e1;
+  color: #64748b; /* Slate gray text */
 }
 
 .why-us-container {
