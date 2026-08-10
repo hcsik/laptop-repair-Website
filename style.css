@@ -5,9 +5,19 @@
   box-sizing: border-box;
 }
 
+:root {
+  --primary-blue: #0284c7;
+  --dark-navy: #0f172a;
+  --mid-navy: #1e293b;
+  --ice-blue: #f0f9ff;
+  --soft-blue: #e0f2fe;
+  --text-dark: #1e293b;
+  --text-muted: #64748b;
+}
+
 body {
   font-family: 'Inter', sans-serif;
-  color: #1e293b;
+  color: var(--text-dark);
   background-color: #f8fafc;
   line-height: 1.6;
 }
@@ -25,27 +35,18 @@ body {
   z-index: 1000;
 }
 
-/* Logo Container */
 .logo-container {
   display: flex;
   align-items: center;
   gap: 12px;
 }
 
-/* Logo Image Styling */
 .site-logo {
-  height: 45px; /* Adjust height based on your logo design */
+  height: 45px;
   width: auto;
   display: block;
   object-fit: contain;
 }
-
-/* Logo Text Next to Image 
-.logo-text {
-  font-size: 1.4rem; HardCom Solution text beside logo
-  font-weight: 800;
-  color: #0284c7;
-}  */
 
 .nav-links {
   display: flex;
@@ -61,7 +62,7 @@ body {
 }
 
 .nav-links a:hover {
-  color: #0284c7;
+  color: var(--primary-blue);
 }
 
 /* Buttons */
@@ -75,7 +76,7 @@ body {
 }
 
 .primary-btn {
-  background-color: #0284c7;
+  background-color: var(--primary-blue);
   color: #ffffff;
 }
 
@@ -84,7 +85,7 @@ body {
 }
 
 .secondary-btn {
-  background-color: #e0f2fe;
+  background-color: var(--soft-blue);
   color: #0369a1;
 }
 
@@ -101,20 +102,10 @@ body {
   background-color: #059669;
 }
 
-/* Hero Section */
-/* Color Adjustments to Match Banner Image */
-:root {
-  --primary-blue: #1d4ed8;
-  --accent-cyan: #0284c7;
-  --light-bg: #f0f9ff;
-}
-
-
-/* Hero Section (Dark Theme + 2-Column Side-by-Side) */
+/* 1. HERO SECTION (Dark Theme) */
 .hero-section {
   padding: 5rem 8%;
-  /* Dark modern gradient background */
-  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  background: linear-gradient(135deg, var(--dark-navy) 0%, var(--mid-navy) 100%);
   color: #ffffff;
 }
 
@@ -127,7 +118,6 @@ body {
   gap: 3rem;
 }
 
-/* Left Column: Text Styling */
 .hero-text-content {
   flex: 1;
   text-align: left;
@@ -143,7 +133,7 @@ body {
 
 .hero-text-content p {
   font-size: 1.1rem;
-  color: #94a3b8; /* Muted light gray for readability */
+  color: #94a3b8;
   margin-bottom: 2rem;
   line-height: 1.7;
 }
@@ -154,7 +144,6 @@ body {
   justify-content: flex-start;
 }
 
-/* Right Column: Image Styling */
 .hero-image-content {
   flex: 1;
   display: flex;
@@ -166,48 +155,66 @@ body {
   max-width: 550px;
   height: auto;
   border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Gives depth against dark background */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
-/* Responsive adjustments for Mobile/Tablets */
-@media (max-width: 900px) {
-  .hero-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .hero-text-content {
-    text-align: center;
-  }
-
-  .hero-buttons {
-    justify-content: center;
-  }
+/* 2. WHY US SECTION (Transition Gradient Dark-to-Light) */
+.why-us-section {
+  padding: 5rem 8%;
+  background: linear-gradient(180deg, var(--mid-navy) 0%, var(--soft-blue) 40%, #ffffff 100%);
 }
 
-/* Primary Button Styling matched to Banner Cyan */
-.btn.primary-btn {
-  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+.why-us-section .section-title h2 {
   color: #ffffff;
 }
 
-.btn.primary-btn:hover {
-  background: linear-gradient(135deg, #0369a1 0%, #075985 100%);
+.why-us-section .section-title p {
+  color: #cbd5e1;
 }
 
-.btn.secondary-btn {
+.why-us-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
   background-color: #ffffff;
-  color: #0284c7;
-  border: 1px solid #bae6fd;
+  border-left: 5px solid var(--primary-blue);
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(15, 23, 42, 0.08);
 }
 
-.btn.secondary-btn:hover {
-  background-color: #f0f9ff;
+.why-us-text {
+  flex: 1.2;
 }
 
-/* Services Section */
-.services-section, .location-section {
+.why-us-text p {
+  font-size: 1.05rem;
+  color: #334155;
+  line-height: 1.8;
+}
+
+.why-us-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.why-us-img {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* 3. SERVICES SECTION (Clean White / Light Blue Cards) */
+.services-section {
   padding: 5rem 8%;
+  background-color: #ffffff;
 }
 
 .section-title {
@@ -217,12 +224,12 @@ body {
 
 .section-title h2 {
   font-size: 2.2rem;
-  color: #0f172a;
+  color: var(--dark-navy);
   font-weight: 700;
 }
 
 .section-title p {
-  color: #64748b;
+  color: var(--text-muted);
 }
 
 .services-grid {
@@ -246,10 +253,9 @@ body {
   box-shadow: 0 12px 24px rgba(0,0,0,0.06);
 }
 
-/* Highlighted Focus Card */
 .service-card.featured {
-  border: 2px solid #0284c7;
-  background-color: #f0f9ff;
+  border: 2px solid var(--primary-blue);
+  background-color: var(--ice-blue);
 }
 
 .badge {
@@ -257,7 +263,7 @@ body {
   top: -12px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #0284c7;
+  background-color: var(--primary-blue);
   color: #ffffff;
   font-size: 0.75rem;
   font-weight: 700;
@@ -274,17 +280,18 @@ body {
 .service-card h3 {
   font-size: 1.3rem;
   margin-bottom: 0.75rem;
-  color: #0f172a;
+  color: var(--dark-navy);
 }
 
 .service-card p {
-  color: #64748b;
+  color: var(--text-muted);
   font-size: 0.95rem;
 }
 
-/* Location & Contact */
+/* 4. LOCATION & CONTACT (Soft Slate) */
 .location-section {
-  background-color: #ffffff;
+  padding: 5rem 8%;
+  background-color: #f8fafc;
 }
 
 .location-container {
@@ -297,7 +304,7 @@ body {
 .contact-info h3 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  color: #0f172a;
+  color: var(--dark-navy);
 }
 
 .contact-info p {
@@ -306,7 +313,7 @@ body {
 }
 
 .contact-info a {
-  color: #0284c7;
+  color: var(--primary-blue);
   text-decoration: none;
 }
 
@@ -317,19 +324,30 @@ body {
   flex-wrap: wrap;
 }
 
-/* Footer */
+/* 5. FOOTER (Dark Navy) */
 footer {
   text-align: center;
   padding: 2rem;
-  background-color: #0f172a;
-  color: #64748b;
+  background-color: var(--dark-navy);
+  color: #94a3b8;
   font-size: 0.9rem;
 }
 
 /* Responsive adjustments */
-@media (max-width: 768px) {
-  .location-container {
-    grid-template-columns: 1fr;
+@media (max-width: 850px) {
+  .hero-container, .why-us-container, .location-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+    gap: 2rem;
+  }
+  
+  .hero-text-content, .why-us-text {
+    text-align: center;
+  }
+  
+  .hero-buttons {
+    justify-content: center;
   }
   
   .hero-section h1 {
@@ -338,66 +356,5 @@ footer {
   
   .nav-links {
     gap: 1rem;
-  }
-}
-
-/* Why Us Section */
-./* Why Us Section */
-.why-us-section {
-  padding: 5rem 8%;
-  background-color: #ffffff;
-}
-
-.why-us-container {
-  max-width: 1100px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 3rem;
-  background-color: #f0f9ff;
-  border-left: 5px solid #0284c7;
-  padding: 2.5rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
-}
-
-/* Left Text Column */
-.why-us-text {
-  flex: 1.2;
-}
-
-.why-us-text p {
-  font-size: 1.05rem;
-  color: #334155;
-  line-height: 1.8;
-}
-
-/* Right Image Column */
-.why-us-image {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-}
-
-.why-us-img {
-  width: 100%;
-  max-width: 450px;
-  height: auto;
-  border-radius: 10px;
-  object-fit: cover;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-/* Responsive adjustment for Mobile/Tablets */
-@media (max-width: 850px) {
-  .why-us-container {
-    flex-direction: column;
-    padding: 1.5rem;
-    gap: 2rem;
-  }
-  
-  .why-us-text {
-    text-align: center;
   }
 }
