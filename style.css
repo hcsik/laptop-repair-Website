@@ -102,15 +102,24 @@ body {
 }
 
 /* Hero Section */
+/* Color Adjustments to Match Banner Image */
+:root {
+  --primary-blue: #1d4ed8;
+  --accent-cyan: #0284c7;
+  --light-bg: #f0f9ff;
+}
+
+/* Hero Section */
 .hero-section {
-  padding: 6rem 8%;
-  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-  color: #ffffff;
+  padding: 4rem 8% 5rem 8%;
+  /* Light blue gradient blending into the banner background */
+  background: linear-gradient(180deg, #f8fafc 0%, #e0f2fe 100%);
+  color: #0f172a;
   text-align: center;
 }
 
 .hero-content {
-  max-width: 800px;
+  max-width: 1000px; /* Matched to your image width */
   margin: 0 auto;
 }
 
@@ -118,18 +127,52 @@ body {
   font-size: 2.8rem;
   font-weight: 800;
   margin-bottom: 1rem;
+  color: #1e3a8a; /* Deep blue heading */
 }
 
 .hero-section p {
   font-size: 1.2rem;
-  color: #94a3b8;
+  color: #334155;
   margin-bottom: 2rem;
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.hero-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
+/* Banner Image Styling */
+.hero-banner-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto 2.5rem auto;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px -5px rgba(2, 132, 199, 0.15);
+}
+
+.hero-banner-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Primary Button Styling matched to Banner Cyan */
+.btn.primary-btn {
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+  color: #ffffff;
+}
+
+.btn.primary-btn:hover {
+  background: linear-gradient(135deg, #0369a1 0%, #075985 100%);
+}
+
+.btn.secondary-btn {
+  background-color: #ffffff;
+  color: #0284c7;
+  border: 1px solid #bae6fd;
+}
+
+.btn.secondary-btn:hover {
+  background-color: #f0f9ff;
 }
 
 /* Services Section */
