@@ -102,11 +102,13 @@ body {
   background-color: #059669;
 }
 
-/* 1. HERO SECTION (Dark Theme) */
+
+/* 1. HERO SECTION (Light Cyan/Blue Theme matching whyus.jpg) */
 .hero-section {
-  padding: 5rem 8%;
-  background: linear-gradient(135deg, var(--dark-navy) 0%, var(--mid-navy) 100%);
-  color: #ffffff;
+  padding: 4rem 8% 5rem 8%;
+  /* Light cyan-to-white gradient matching whyus.jpg left background */
+  background: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 50%, #ffffff 100%);
+  color: #0f172a;
 }
 
 .hero-container {
@@ -128,12 +130,12 @@ body {
   font-weight: 800;
   line-height: 1.2;
   margin-bottom: 1.2rem;
-  color: #ffffff;
+  color: #0f172a; /* Dark navy text for high contrast on light background */
 }
 
 .hero-text-content p {
   font-size: 1.1rem;
-  color: #94a3b8;
+  color: #334155; /* Dark slate text */
   margin-bottom: 2rem;
   line-height: 1.7;
 }
@@ -155,7 +157,7 @@ body {
   max-width: 550px;
   height: auto;
   border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 10px 25px rgba(2, 132, 199, 0.12); /* Soft shadow matching the blue accent */
 }
 
 /* 2. WHY US SECTION (Transition Gradient Dark-to-Light) */
