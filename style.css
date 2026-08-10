@@ -109,50 +109,80 @@ body {
   --light-bg: #f0f9ff;
 }
 
-/* Hero Section */
+
+/* Hero Section (Dark Theme + 2-Column Side-by-Side) */
 .hero-section {
-  padding: 4rem 8% 5rem 8%;
-  /* Light blue gradient blending into the banner background */
-  background: linear-gradient(180deg, #f8fafc 0%, #e0f2fe 100%);
-  color: #0f172a;
-  text-align: center;
+  padding: 5rem 8%;
+  /* Dark modern gradient background */
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  color: #ffffff;
 }
 
-.hero-content {
-  max-width: 1000px; /* Matched to your image width */
+.hero-container {
+  max-width: 1200px;
   margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
 }
 
-.hero-section h1 {
-  font-size: 2.8rem;
+/* Left Column: Text Styling */
+.hero-text-content {
+  flex: 1;
+  text-align: left;
+}
+
+.hero-text-content h1 {
+  font-size: 2.5rem;
   font-weight: 800;
-  margin-bottom: 1rem;
-  color: #1e3a8a; /* Deep blue heading */
+  line-height: 1.2;
+  margin-bottom: 1.2rem;
+  color: #ffffff;
 }
 
-.hero-section p {
-  font-size: 1.2rem;
-  color: #334155;
+.hero-text-content p {
+  font-size: 1.1rem;
+  color: #94a3b8; /* Muted light gray for readability */
   margin-bottom: 2rem;
-  max-width: 750px;
-  margin-left: auto;
-  margin-right: auto;
+  line-height: 1.7;
 }
 
-/* Banner Image Styling */
-.hero-banner-container {
-  width: 100%;
-  max-width: 1000px;
-  margin: 0 auto 2.5rem auto;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 10px 25px -5px rgba(2, 132, 199, 0.15);
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-start;
+}
+
+/* Right Column: Image Styling */
+.hero-image-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
 }
 
 .hero-banner-img {
   width: 100%;
+  max-width: 550px;
   height: auto;
-  display: block;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Gives depth against dark background */
+}
+
+/* Responsive adjustments for Mobile/Tablets */
+@media (max-width: 900px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text-content {
+    text-align: center;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
 }
 
 /* Primary Button Styling matched to Banner Cyan */
