@@ -25,13 +25,12 @@ body {
 }
 
 /* Navbar Logo Styling */
-
 .navbar {
   display: flex !important;
   justify-content: space-between !important;
   align-items: center !important;
   padding: 0.8rem 8%;
-  background-color:#e0f2fe; 
+  background-color: #e0f2fe; 
   box-shadow: 0 2px 10px rgba(0,0,0,0.05);
   position: sticky;
   top: 0;
@@ -41,11 +40,11 @@ body {
 .logo-container {
   display: flex;
   align-items: center;
-  margin-left: 10rem; /* Shifts the logo 10rem away from the left edge */
+  margin-left: 10rem; /* Shifts logo 10rem away from left edge */
 }
 
 .site-logo {
-  height: 70px; /* ~15% larger logo display */
+  height: 70px;
   width: auto;
   display: block;
   object-fit: contain;
@@ -57,7 +56,7 @@ body {
   flex-direction: row !important;
   list-style: none !important;
   gap: 2rem;
-  margin: 0 10rem 0 0; /* Pushes the menu 4rem away from the far right edge */
+  margin: 0 10rem 0 0; /* Pushes menu 10rem away from right edge */
   padding: 0;
 }
 
@@ -77,13 +76,31 @@ body {
   color: var(--primary-blue);
 }
 
-/* Orange Buttons (#f3801d) for Contact Section Actions */
+/* Base Button */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.primary-btn {
+  background-color: var(--primary-blue);
+  color: #ffffff;
+}
+
+.primary-btn:hover {
+  background-color: #0369a1;
+}
+
 /* Orange Buttons (#f3801d) for Contact Section Actions */
 .contact-actions .primary-btn,
 .contact-actions .map-btn,
 a.map-btn {
   background-color: var(--accent-orange);
-  color: #ffffff !important; /* Forces text to be pure white before hover */
+  color: #ffffff !important;
   text-decoration: none;
   border: none;
 }
@@ -92,14 +109,13 @@ a.map-btn {
 .contact-actions .map-btn:hover,
 a.map-btn:hover {
   background-color: var(--accent-orange-hover);
-  color: #ffffff !important; /* Keeps text pure white on hover */
+  color: #ffffff !important;
 }
 
 
-/* 1. HERO SECTION (Light Cyan/Blue Theme matching whyus.jpg) */
+/* 1. HERO SECTION */
 .hero-section {
   padding: 4rem 8% 5rem 8%;
-  /* Light cyan-to-white gradient matching whyus.jpg left background */
   background: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 50%, #ffffff 100%);
   color: #0f172a;
 }
@@ -123,12 +139,12 @@ a.map-btn:hover {
   font-weight: 800;
   line-height: 1.2;
   margin-bottom: 1.2rem;
-  color: #0f172a; /* Dark navy text for high contrast on light background */
+  color: #0f172a;
 }
 
 .hero-text-content p {
   font-size: 1.1rem;
-  color: #334155; /* Dark slate text */
+  color: #334155;
   margin-bottom: 2rem;
   line-height: 1.7;
 }
@@ -150,23 +166,22 @@ a.map-btn:hover {
   max-width: 550px;
   height: auto;
   border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(2, 132, 199, 0.12); /* Soft shadow matching the blue accent */
+  box-shadow: 0 10px 25px rgba(2, 132, 199, 0.12);
 }
 
 
-/* 2. WHY US SECTION (Clean Light Background - Option 1) */
+/* 2. WHY US SECTION */
 .why-us-section {
   padding: 5rem 8%;
-  /* 90deg transitions the color horizontally from left to right */
   background: linear-gradient(90deg, #e0f2fe 30%, #ffffff 100%);
 }
 
 .why-us-section .section-title h2 {
-  color: #0f172a; /* Dark navy text */
+  color: #0f172a;
 }
 
 .why-us-section .section-title p {
-  color: #64748b; /* Slate gray text */
+  color: #64748b;
 }
 
 .why-us-container {
@@ -187,13 +202,11 @@ a.map-btn:hover {
   flex: 1.2;
 }
 
-/* Left Text Column in Why Us Section */
 .why-us-text p {
   font-size: 1.05rem;
   color: #334155;
   line-height: 1.8;
-  text-align: center; /* Justifies the text alignment */
-}
+  text-align: justify;
 }
 
 .why-us-image {
@@ -212,11 +225,9 @@ a.map-btn:hover {
 }
 
 
-
-/* 3. SERVICES SECTION (Gradient from #e0f2fe on left to white on right) */
+/* 3. SERVICES SECTION */
 .services-section {
   padding: 5rem 8%;
-  /* 90deg transitions the color horizontally from left to right */
   background: linear-gradient(90deg, #e0f2fe 30%, #ffffff 100%);
 }
 
@@ -292,10 +303,9 @@ a.map-btn:hover {
 }
 
 
-/* 4. LOCATION & CONTACT (Soft Slate) */
+/* 4. LOCATION & CONTACT */
 .location-section {
   padding: 5rem 8%;
-  /* 90deg transitions the color horizontally from left to right */
   background: linear-gradient(90deg, #e0f2fe 30%, #ffffff 100%);
 }
 
@@ -329,8 +339,13 @@ a.map-btn:hover {
   flex-wrap: wrap;
 }
 
+.map-embed iframe {
+  width: 100%;
+  border-radius: 12px;
+}
 
-/* 5. FOOTER (Dark Navy) */
+
+/* 5. FOOTER */
 footer {
   text-align: center;
   padding: 2rem;
@@ -340,62 +355,34 @@ footer {
 }
 
 
-/* Responsive adjustments */
-@media (max-width: 850px) {
-  .hero-container, .why-us-container, .location-container {
-    flex-direction: column;
-    text-align: center;
-    padding: 1.5rem;
-    gap: 2rem;
-  }
-  
-  .hero-text-content, .why-us-text {
-    text-align: center;
-  }
-  
-  .hero-buttons {
-    justify-content: center;
-  }
-  
-  .hero-section h1 {
-    font-size: 2rem;
-  }
-  
-  .nav-links {
-    gap: 1rem;
-  }
-}
-
 /* Responsive adjustments for Mobile & Tablets */
 @media (max-width: 850px) {
-  /* Fix Navbar layout on mobile */
   .navbar {
-    flex-direction: column; /* Stack logo on top, menu below */
+    flex-direction: column;
     padding: 1rem 4%;
     gap: 1rem;
   }
 
   .logo-container {
-    margin-left: 0 !important; /* Reset desktop left margin */
+    margin-left: 0 !important;
     justify-content: center;
   }
 
   .site-logo {
-    height: 42px; /* Slightly smaller logo for mobile screens */
+    height: 42px;
   }
 
   .nav-links {
-    margin: 0 !important; /* Reset desktop right margin */
+    margin: 0 !important;
     gap: 1rem;
-    flex-wrap: wrap; /* Allows links to flow cleanly on small screens */
+    flex-wrap: wrap;
     justify-content: center;
   }
 
   .nav-links a {
-    font-size: 0.95rem; /* Better font size for mobile touch targets */
+    font-size: 0.95rem;
   }
 
-  /* Section adjustments */
   .hero-container, 
   .why-us-container, 
   .location-container {
