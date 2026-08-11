@@ -204,10 +204,13 @@ a.map-btn:hover {
   flex: 1.2;
 }
 
+/* Left Text Column in Why Us Section */
 .why-us-text p {
   font-size: 1.05rem;
   color: #334155;
   line-height: 1.8;
+  text-align: justify; /* Justifies the text alignment */
+}
 }
 
 .why-us-image {
