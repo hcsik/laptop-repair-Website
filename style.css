@@ -157,7 +157,8 @@ a.map-btn:hover {
 /* 2. WHY US SECTION (Clean Light Background - Option 1) */
 .why-us-section {
   padding: 5rem 8%;
-  background-color: #f8fafc; /* Soft off-white matching the main body */
+  /* 90deg transitions the color horizontally from left to right */
+  background: linear-gradient(90deg, #e0f2fe 30%, #ffffff 100%);
 }
 
 .why-us-section .section-title h2 {
@@ -211,10 +212,12 @@ a.map-btn:hover {
 }
 
 
-/* 3. SERVICES SECTION (Clean White / Light Blue Cards) */
+
+/* 3. SERVICES SECTION (Gradient from #e0f2fe on left to white on right) */
 .services-section {
   padding: 5rem 8%;
-  background-color: #ffffff;
+  /* 90deg transitions the color horizontally from left to right */
+  background: linear-gradient(90deg, #e0f2fe 30%, #ffffff 100%);
 }
 
 .section-title {
@@ -292,7 +295,8 @@ a.map-btn:hover {
 /* 4. LOCATION & CONTACT (Soft Slate) */
 .location-section {
   padding: 5rem 8%;
-  background-color: #f8fafc;
+  /* 90deg transitions the color horizontally from left to right */
+  background: linear-gradient(90deg, #e0f2fe 30%, #ffffff 100%);
 }
 
 .location-container {
