@@ -25,46 +25,24 @@ body {
 }
 
 /* Navbar */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.8rem 8%;
-  background-color: #ffffff;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
+/* Navbar Logo Styling */
 .logo-container {
   display: flex;
   align-items: center;
-  gap: 12px;
 }
 
 .site-logo {
-  height: 45px;
+  height: 52px; /* Increased by ~15% (from 45px) for a larger display */
   width: auto;
   display: block;
   object-fit: contain;
 }
 
-.nav-links {
-  display: flex;
-  list-style: none;
-  gap: 2rem;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: #334155;
-  font-weight: 600;
-  transition: color 0.2s;
-}
-
-.nav-links a:hover {
-  color: var(--primary-blue);
+/* Hide any text element next to the logo image */
+.logo-text,
+.logo-container span,
+.logo-container p {
+  display: none;
 }
 
 /* Buttons */
@@ -209,7 +187,7 @@ a.map-btn:hover {
   font-size: 1.05rem;
   color: #334155;
   line-height: 1.8;
-  text-align: justify; /* Justifies the text alignment */
+  text-align: center; /* Justifies the text alignment */
 }
 }
 
