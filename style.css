@@ -96,16 +96,21 @@ body {
 }
 
 /* Orange Buttons (#f3801d) for Contact Section Actions */
+/* Orange Buttons (#f3801d) for Contact Section Actions */
 .contact-actions .primary-btn,
-.map-btn {
+.contact-actions .map-btn,
+a.map-btn {
   background-color: var(--accent-orange);
-  color: #ffffff;
+  color: #ffffff !important; /* Forces text to be pure white before hover */
+  text-decoration: none;
   border: none;
 }
 
 .contact-actions .primary-btn:hover,
-.map-btn:hover {
+.contact-actions .map-btn:hover,
+a.map-btn:hover {
   background-color: var(--accent-orange-hover);
+  color: #ffffff !important; /* Keeps text pure white on hover */
 }
 
 
