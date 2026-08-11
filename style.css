@@ -24,53 +24,56 @@ body {
   line-height: 1.6;
 }
 
-/* Navbar */
 /* Navbar Logo Styling */
+
+.navbar {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding: 0.8rem 8%;
+  background-color: #ffffff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
 .logo-container {
   display: flex;
   align-items: center;
 }
 
 .site-logo {
-  height: 52px; /* Increased by ~15% (from 45px) for a larger display */
+  height: 60px; /* ~15% larger logo display */
   width: auto;
   display: block;
   object-fit: contain;
 }
 
-/* Hide any text element next to the logo image */
-.logo-text,
-.logo-container span,
-.logo-container p {
-  display: none;
+/* Horizontal Link Menu */
+.nav-links {
+  display: flex !important;
+  flex-direction: row !important;
+  list-style: none !important;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
 }
 
-/* Buttons */
-.btn {
+.nav-links li {
   display: inline-block;
-  padding: 0.75rem 1.5rem;
-  border-radius: 8px;
-  text-decoration: none;
+}
+
+.nav-links a {
+  text-decoration: none !important;
+  color: #334155;
   font-weight: 600;
-  transition: all 0.2s;
+  font-size: 1rem;
+  transition: color 0.2s;
 }
 
-.primary-btn {
-  background-color: var(--primary-blue);
-  color: #ffffff;
-}
-
-.primary-btn:hover {
-  background-color: #0369a1;
-}
-
-.secondary-btn {
-  background-color: var(--soft-blue);
-  color: #0369a1;
-}
-
-.secondary-btn:hover {
-  background-color: #bae6fd;
+.nav-links a:hover {
+  color: var(--primary-blue);
 }
 
 /* Orange Buttons (#f3801d) for Contact Section Actions */
